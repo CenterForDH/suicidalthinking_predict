@@ -121,7 +121,7 @@ def input_values():
     depression = depressionDict[depression]
 
     exercise = st.radio('Exercise status', ('Not enough','Enough'), horizontal=True)
-    exerciseDict = {'Not enough':0,'Enough':1}
+    exerciseDict = {'Enough(more than 1hour/day)':0,'Not enough(less than 1hour)/day':1}
     exercise = exerciseDict[exercise]
 
     suicidalthinking = st.radio('Suicidal thinking', ('No','Yes'), horizontal=True)
@@ -129,7 +129,7 @@ def input_values():
     suicidalthinking = suicidalthinkingDict[suicidalthinking]
 
     screentime = st.radio('Screentime status', ('Low to moderate','High to severe'), horizontal=True)
-    screentimeDict = {'Low to moderate':0,'High to severe':1}
+    screentimeDict = {'2 or less hours/day':0,'more than 3hours/day':1}
     screentime = screentimeDict[screentime]
     
     X_test = [region, Age, SEX, bmi_2, study, household_income, smoking, alcoholic_consumption, stress, depression, exercise, suicidalthinking, screentime]
